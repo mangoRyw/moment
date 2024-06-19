@@ -16,7 +16,6 @@ import {
     MILLISECOND,
 } from '../units/constants';
 import { createLocal } from './local';
-import defaults from '../utils/defaults';
 import getParsingFlags from './parsing-flags';
 
 function currentDateArray(config) {
@@ -57,7 +56,7 @@ export function configFromArray(config) {
 
     //if the day of the year is set, figure out what it is
     if (config._dayOfYear != null) {
-        yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+        yearToUse = firstNonNullArgument(config._a[YEAR], currentDate[YEAR]);
 
         if (
             config._dayOfYear > daysInYear(yearToUse) ||
@@ -137,13 +136,13 @@ function dayOfYearFromWeekInfo(config) {
         // how we interpret now (local, utc, fixed offset). So create
         // a now version of current config (take local/utc/offset flags, and
         // create now).
-        weekYear = defaults(
+        weekYear = firstNonNullArgument(
             w.GG,
             config._a[YEAR],
             weekOfYear(createLocal(), 1, 4).year
         );
-        week = defaults(w.W, 1);
-        weekday = defaults(w.E, 1);
+        week = firstNonNullArgument(w.W, 1);
+        weekday = firstNonNullArgument(w.E, 1);
         if (weekday < 1 || weekday > 7) {
             weekdayOverflow = true;
         }
@@ -153,10 +152,10 @@ function dayOfYearFromWeekInfo(config) {
 
         curWeek = weekOfYear(createLocal(), dow, doy);
 
-        weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+        weekYear = firstNonNullArgument(w.gg, config._a[YEAR], curWeek.year);
 
         // Default to current week.
-        week = defaults(w.w, curWeek.week);
+        week = firstNonNullArgument(w.w, curWeek.week);
 
         if (w.d != null) {
             // weekday -- low day numbers are considered next week
@@ -185,3 +184,15 @@ function dayOfYearFromWeekInfo(config) {
         config._dayOfYear = temp.dayOfYear;
     }
 }
+
+// Pick the first defined of two or three arguments.
+function firstNonNullArgument(a, b, c) {
+    if (a != null) {
+        return a;
+    }
+    if (b != null) {
+        return b;
+    }
+    return c;
+}
+

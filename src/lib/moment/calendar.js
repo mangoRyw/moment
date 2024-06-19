@@ -7,19 +7,21 @@ import isCalendarSpec from '../utils/is-calendar-spec';
 
 export function getCalendarFormat(myMoment, now) {
     var diff = myMoment.diff(now, 'days', true);
-    return diff < -6
-        ? 'sameElse'
-        : diff < -1
-          ? 'lastWeek'
-          : diff < 0
-            ? 'lastDay'
-            : diff < 1
-              ? 'sameDay'
-              : diff < 2
-                ? 'nextDay'
-                : diff < 7
-                  ? 'nextWeek'
-                  : 'sameElse';
+    if (diff < -6) {
+        return 'sameElse';
+    } else if (diff < -1) {
+        return 'lastWeek';
+    } else if (diff < 0) {
+        return 'lastDay';
+    } else if (diff < 1) {
+        return 'sameDay';
+    } else if (diff < 2) {
+        return 'nextDay';
+    } else if (diff < 7) {
+        return 'nextWeek';
+    } else {
+        return 'sameElse';
+    }
 }
 
 export function calendar(time, formats) {
