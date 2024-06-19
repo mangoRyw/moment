@@ -8,7 +8,7 @@ import {
 } from '../parse/regex';
 import { addWeekParseToken } from '../parse/token';
 import toInt from '../utils/to-int';
-import isArray from '../utils/is-array';
+import { isArray } from '../utils/check-object-type';
 import indexOf from '../utils/index-of';
 import hasOwnProp from '../utils/has-own-prop';
 import { createUTC } from '../create/utc';

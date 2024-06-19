@@ -1,5 +1,5 @@
 import { test } from '../qunit';
-import isArray from '../../lib/utils/is-array.js';
+import { isArray } from '../../lib/utils/check-object-type.js';
 
 test('isArray recognizes Array objects', function (assert) {
     assert.ok(isArray([1, 2, 3]), 'array args');

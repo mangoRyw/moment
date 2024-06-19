@@ -1,6 +1,5 @@
-import isFunction from '../utils/is-function';
+import { isFunction, isObject } from '../utils/check-object-type';
 import extend from '../utils/extend';
-import isObject from '../utils/is-object';
 import hasOwnProp from '../utils/has-own-prop';
 
 export function set(config) {

@@ -1,5 +1,5 @@
 import { deprecate } from '../utils/deprecate';
-import isArray from '../utils/is-array';
+import { isArray } from '../utils/check-object-type';
 import { createLocal } from '../create/local';
 import { createInvalid } from '../create/valid';
 

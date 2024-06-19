@@ -8,9 +8,8 @@ import { addParseToken } from '../parse/token';
 import { createLocal } from '../create/local';
 import { prepareConfig } from '../create/from-anything';
 import { createUTC } from '../create/utc';
-import isDate from '../utils/is-date';
+import { isDate, isUndefined } from '../utils/check-object-type';
 import toInt from '../utils/to-int';
-import isUndefined from '../utils/is-undefined';
 import compareArrays from '../utils/compare-arrays';
 import { hooks } from '../utils/hooks';
 

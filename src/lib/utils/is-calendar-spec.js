@@ -1,6 +1,6 @@
 import isObjectEmpty from './is-object-empty';
 import hasOwnProp from './has-own-prop';
-import isObject from './is-object';
+import { isObject } from './check-object-type';
 
 export default function isCalendarSpec(input) {
     var objectTest = isObject(input) && !isObjectEmpty(input),

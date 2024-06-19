@@ -1,4 +1,4 @@
-import isNumber from '../utils/is-number';
+import { isNumber } from '../utils/check-object-type';
 import { getLocale } from './locales';
 import { createUTC } from '../create/utc';
 

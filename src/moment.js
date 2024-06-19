@@ -45,7 +45,7 @@ import {
 
 import { normalizeUnits } from './lib/units/units';
 
-import isDate from './lib/utils/is-date';
+import { isDate } from './lib/utils/check-object-type';
 
 setHookCallback(local);
 

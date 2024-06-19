@@ -1,8 +1,8 @@
 import { normalizeUnits, normalizeObjectUnits } from '../units/aliases';
 import { getPrioritizedUnits } from '../units/priorities';
 import { hooks } from '../utils/hooks';
-import isFunction from '../utils/is-function';
-import { isLeapYear } from '../units/year';
+import { isFunction } from '../utils/check-object-type';
+import { isLeapYear } from '../utils/is-leap-year';
 
 export function makeGetSet(unit, keepTime) {
     return function (value) {

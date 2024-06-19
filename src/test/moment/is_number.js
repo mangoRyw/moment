@@ -1,5 +1,5 @@
 import { test } from '../qunit';
-import isNumber from '../../lib/utils/is-number.js';
+import { isNumber } from '../../lib/utils/check-object-type.js';
 
 test('isNumber recognizes numbers', function (assert) {
     assert.ok(isNumber(1), 'simple integer');
