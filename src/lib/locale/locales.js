@@ -1,5 +1,4 @@
-import isArray from '../utils/is-array';
-import isUndefined from '../utils/is-undefined';
+import { isArray, isUndefined } from '../utils/check-object-type';
 import { deprecateSimple } from '../utils/deprecate';
 import { mergeConfigs } from './set';
 import { Locale } from './constructor';

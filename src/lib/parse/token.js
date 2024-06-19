@@ -1,5 +1,5 @@
 import hasOwnProp from '../utils/has-own-prop';
-import isNumber from '../utils/is-number';
+import { isNumber } from '../utils/check-object-type';
 import toInt from '../utils/to-int';
 
 var tokens = {};

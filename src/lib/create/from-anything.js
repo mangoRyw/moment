@@ -1,9 +1,5 @@
-import isArray from '../utils/is-array';
-import isObject from '../utils/is-object';
+import { isArray, isDate, isNumber, isObject, isUndefined } from '../utils/check-object-type';
 import isObjectEmpty from '../utils/is-object-empty';
-import isUndefined from '../utils/is-undefined';
-import isNumber from '../utils/is-number';
-import isDate from '../utils/is-date';
 import map from '../utils/map';
 import { createInvalid } from './valid';
 import { Moment, isMoment } from '../moment/constructor';

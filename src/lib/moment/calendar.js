@@ -1,6 +1,6 @@
 import { createLocal } from '../create/local';
 import { cloneWithOffset } from '../units/offset';
-import isFunction from '../utils/is-function';
+import { isFunction } from '../utils/check-object-type';
 import { hooks } from '../utils/hooks';
 import { isMomentInput } from '../utils/is-moment-input';
 import isCalendarSpec from '../utils/is-calendar-spec';

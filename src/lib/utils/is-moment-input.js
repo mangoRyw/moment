@@ -1,11 +1,7 @@
 import isObjectEmpty from './is-object-empty';
 import hasOwnProp from './has-own-prop';
-import isObject from './is-object';
-import isDate from './is-date';
-import isNumber from './is-number';
-import isString from './is-string';
+import { isArray, isDate, isNumber, isObject, isString } from './check-object-type';
 import { isMoment } from '../moment/constructor';
-import isArray from './is-array';
 
 // type MomentInput = Moment | Date | string | number | (number | string)[] | MomentInputObject | void; // null | undefined
 export function isMomentInput(input) {

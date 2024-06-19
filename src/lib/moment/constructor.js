@@ -1,5 +1,5 @@
 import { hooks } from '../utils/hooks';
-import isUndefined from '../utils/is-undefined';
+import { isUndefined } from '../utils/check-object-type';
 import getParsingFlags from '../create/parsing-flags';
 
 // Plugins that add properties should also add the key here (null value),

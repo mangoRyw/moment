@@ -1,5 +1,5 @@
 import { Duration, isDuration } from './constructor';
-import isNumber from '../utils/is-number';
+import { isNumber } from '../utils/check-object-type';
 import toInt from '../utils/to-int';
 import absRound from '../utils/abs-round';
 import hasOwnProp from '../utils/has-own-prop';

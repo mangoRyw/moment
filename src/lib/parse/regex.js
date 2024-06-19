@@ -45,8 +45,7 @@ export {
 };
 
 import hasOwnProp from '../utils/has-own-prop';
-import isFunction from '../utils/is-function';
-
+import { isFunction } from '../utils/check-object-type';
 regexes = {};
 
 export function addRegexToken(token, regex, strictRegex) {
