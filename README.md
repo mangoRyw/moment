@@ -12,7 +12,7 @@ A JavaScript date library for parsing, validating, manipulating, and formatting 
 
 ## Project Status
 
-Moment.js is a legacy project, now in maintenance mode.  In most cases, you should choose a different library.
+Moment.js is a legacy project, now in maintenance mode.  In most cases, you should choose a [different library](https://npm-compare.com/@js-joda/core,date-fns,dayjs,luxon,moment/#timeRange=THREE_YEARS).
 
 For more details and recommendations, please see [Project Status](https://momentjs.com/docs/#/-project-status/) in the docs.
 
