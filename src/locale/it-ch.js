@@ -1,7 +1,7 @@
 //! moment.js locale configuration
 //! locale : Italian (Switzerland) [it-ch]
 //! author : xfh : https://github.com/xfh
-//! author: ZeroKun265 : https://github.com/ZeroKun265
+//! author : ZeroKun265 : https://github.com/ZeroKun265
 
 import moment from '../moment';
 
