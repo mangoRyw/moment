@@ -79,8 +79,8 @@
                 ordinalSuffix = 'nd';  // 2nd
             }
         
-            // feminine with ending "a" for year, week, hour, minute and second
-            if (/^[yYwWhHgGis]$/.test(period)) {
+            // feminine with ending "a" for week, hour, minute and second
+            if (/^[wWhHgGis]$/.test(period)) {
                 ordinalSuffix += 'a';
             }
         
